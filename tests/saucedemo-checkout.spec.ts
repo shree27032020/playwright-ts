@@ -1,13 +1,12 @@
 import { test, expect } from '../fixtures/pages';
 
 test.describe('Checkout', () => {
-  test.beforeEach(async ({ loginPage, inventoryPage, cartPage }) => {
-    await loginPage.goto();
-    await loginPage.login('standard_user', 'secret_sauce');
-    await inventoryPage.addFirstItemToCart();
-    await inventoryPage.openCart();
-    await cartPage.proceedToCheckout();
-  });
+test.beforeEach(async ({ inventoryPage, cartPage }) => {
+  await inventoryPage.goto();
+  await inventoryPage.addFirstItemToCart();
+  await inventoryPage.openCart();
+  await cartPage.proceedToCheckout();
+});
 
   test('user can complete a purchase', async ({ checkoutPage }) => {
     await checkoutPage.fillDetails('Asha', 'Kumar', '641001');

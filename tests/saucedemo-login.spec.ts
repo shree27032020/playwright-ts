@@ -1,4 +1,5 @@
 import { test, expect } from '../fixtures/pages';
+test.use({ storageState: { cookies: [], origins: [] } });
 
 test.describe('Login', () => {
 

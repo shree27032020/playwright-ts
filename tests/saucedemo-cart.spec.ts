@@ -1,10 +1,9 @@
 import { test, expect } from '../fixtures/pages';
 
 test.describe('Shopping cart', () => {
-  test.beforeEach(async ({ loginPage }) => {
-    await loginPage.goto();
-    await loginPage.login('standard_user', 'secret_sauce');
-  });
+test.beforeEach(async ({ inventoryPage }) => {
+  await inventoryPage.goto();
+});
 
   test('add one item to the cart', async ({ inventoryPage }) => {
     await inventoryPage.addFirstItemToCart();
