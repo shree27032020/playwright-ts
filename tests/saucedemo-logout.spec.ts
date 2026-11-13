@@ -1,9 +1,8 @@
 import { test, expect } from '../fixtures/pages';
 
 test.describe('Logout', () => {
-  test.beforeEach(async ({ loginPage }) => {
-    await loginPage.goto();
-    await loginPage.login('standard_user', 'secret_sauce'); 
+  test.beforeEach(async ({ inventoryPage }) => {
+    await inventoryPage.goto();
   });
 
   test('user can log out', async ({ page, loginPage }) => {

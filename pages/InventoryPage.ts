@@ -20,4 +20,8 @@ export class InventoryPage {
   async openCart() {
     await this.cartLink.click();
   }
+
+  async goto() {
+  await this.page.goto('/inventory.html');
+  } 
 }
