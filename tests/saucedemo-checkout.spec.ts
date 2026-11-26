@@ -18,7 +18,7 @@ test.beforeEach(async ({ inventoryPage, cartPage }) => {
   test('shows an error when first name is empty', async ({ checkoutPage }) => {
     await checkoutPage.fillDetails('', 'Kumar', '641001');
 
-    await expect(checkoutPage.errorMessage).toContainText('First Name is required');
+    await expect(checkoutPage.errorMessage).toContainText('First Name is mandatory');
   });
 
   test('shows an error when last name is empty', async ({ checkoutPage }) => {
